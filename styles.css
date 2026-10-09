@@ -1,0 +1,61 @@
+/* 
+Purpose: This CSS file provides custom styling, colors, and layout adjustments for the homepage and survey form. 
+Author: Sattu Akarsh Reddy 
+*/
+
+body {
+    background-color: #f0f0f0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+h1 {
+    color: #006633 !important; 
+    font-weight: bold;
+}
+
+.gmu-header-box {
+    border: 5px solid #006633;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-gmu {
+    background-color: #006633 !important;
+    color: white !important;
+    border: 2px solid #006633 !important;
+    font-weight: 600 !important;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-gmu:hover {
+    background-color: #004d26 !important;
+    color: #FFCC33 !important; 
+    border-color: #FFCC33 !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.required-label::after {
+    content: " *";
+    color: #dc3545; 
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #006633 !important;
+    box-shadow: 0 0 5px rgba(0, 102, 51, 0.5) !important;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    border-top: 6px solid #FFCC33; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}

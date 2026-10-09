@@ -1,0 +1,15 @@
+# Purpose: This file creates a Kubernetes Service of type LoadBalancer to expose the SWE645 Assignment 2 pods to the public internet.
+# Author: Sattu Akarsh Reddy
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: swe645-app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: swe645-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

@@ -1,0 +1,157 @@
+<!-- 
+Purpose: This file contains the Student Survey form to collect feedback from prospective students. 
+Author: Sattu Akarsh Reddy 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container mt-4 mb-5">
+    <div class="gmu-header-box">
+        <h1>Campus Visit Feedback</h1>
+    </div>
+
+    <div class="form-container">
+        <form autocomplete="on" action="#" method="get">
+
+            <h4 class="mb-3 text-secondary border-bottom pb-2">Personal Information</h4>
+            
+            <!-- All Required Fields per instructions -->
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="firstName" class="form-label required-label">First Name</label>
+                    <input type="text" id="firstName" name="firstName" class="form-control" autofocus required>
+                </div>
+                <div class="col-md-6">
+                    <label for="lastName" class="form-label required-label">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" class="form-control" required>
+                </div>
+                <div class="col-12">
+                    <label for="address" class="form-label required-label">Street Address</label>
+                    <input type="text" id="address" name="address" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="city" class="form-label required-label">City</label>
+                    <input type="text" id="city" name="city" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="state" class="form-label required-label">State</label>
+                    <input type="text" id="state" name="state" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="zip" class="form-label required-label">Zip</label>
+                    <input type="text" id="zip" name="zip" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="phone" class="form-label required-label">Telephone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label required-label">E-mail</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="col-md-12">
+                    <label for="surveyDate" class="form-label required-label">Date of Survey</label>
+                    <input type="date" id="surveyDate" name="surveyDate" class="form-control" required>
+                </div>
+            </div>
+
+            <h4 class="mt-5 mb-3 text-secondary border-bottom pb-2">Feedback & Preferences</h4>
+
+            <!-- Checkboxes -->
+            <div class="mb-4">
+                <label class="form-label fw-bold">What did you like most about the campus?</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="students" name="likes" value="students">
+                    <label class="form-check-label" for="students">Students</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="location" name="likes" value="location">
+                    <label class="form-check-label" for="location">Location</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="campus" name="likes" value="campus">
+                    <label class="form-check-label" for="campus">Campus</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="atmosphere" name="likes" value="atmosphere">
+                    <label class="form-check-label" for="atmosphere">Atmosphere</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="dorm" name="likes" value="dorm_rooms">
+                    <label class="form-check-label" for="dorm">Dorm Rooms</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="sports" name="likes" value="sports">
+                    <label class="form-check-label" for="sports">Sports</label>
+                </div>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="mb-4">
+                <label class="form-label fw-bold">How did you become interested in the university?</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="interest" id="friends" value="friends">
+                    <label class="form-check-label" for="friends">Friends</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="interest" id="tv" value="television">
+                    <label class="form-check-label" for="tv">Television</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="interest" id="internet" value="internet">
+                    <label class="form-check-label" for="internet">Internet</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="interest" id="other" value="other">
+                    <label class="form-check-label" for="other">Other</label>
+                </div>
+            </div>
+
+            <!-- Dropdown -->
+            <div class="mb-4">
+                <label for="recommend" class="form-label fw-bold">Likelihood of recommending this school:</label>
+                <select id="recommend" name="recommend" class="form-select">
+                    <option value="" disabled selected>Select an option...</option>
+                    <option value="Very Likely">Very Likely</option>
+                    <option value="Likely">Likely</option>
+                    <option value="Unlikely">Unlikely</option>
+                </select>
+            </div>
+
+            <!-- Raffle Text Box -->
+            <div class="mb-4">
+                <label for="raffle" class="form-label fw-bold">Raffle</label>
+                <p class="text-muted mb-1" style="font-size: 0.9em;">Enter at least ten comma separated numbers ranging from 1 through 100.</p>
+                <input type="text" id="raffle" name="raffle" class="form-control" placeholder="e.g., 5, 12, 45, 88, 9, 23, 76, 50, 31, 10">
+            </div>
+
+            <!-- Additional Comments -->
+            <div class="mb-4">
+                <label for="comments" class="form-label fw-bold">Additional Comments</label>
+                <textarea id="comments" name="comments" class="form-control" rows="4"></textarea>
+            </div>
+
+            <!-- Submit and Cancel buttons -->
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-gmu">Submit</button>
+                <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="text-center mt-3">
+        <a href="index.html" class="text-decoration-none">← Back to Homepage</a>
+    </div>
+</div>
+
+</body>
+</html>

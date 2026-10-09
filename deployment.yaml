@@ -1,0 +1,22 @@
+# Purpose: This file creates a Kubernetes Deployment for the SWE645 web application, maintaining exactly 3 replica pods for resiliency so deleted pods auto-replace.
+# Author: Sattu Akarsh Reddy
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swe645-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: swe645-app
+  template:
+    metadata:
+      labels:
+        app: swe645-app
+    spec:
+      containers:
+      - name: swe645-web-container
+        image: akarshreddy0403/swe645-hw2:latest
+        ports:
+        - containerPort: 80
